@@ -8,12 +8,8 @@ name = "event"
 path = "bin/event.rs"
 
 [[bin]]
-name = "blit"
-path = "bin/blit.rs"
-
-[[bin]]
-name = "frames"
-path = "bin/frames.rs"
+name = "dithering"
+path = "bin/dithering.rs"
 
 [dependencies]
 caca = { path = "../../projects/caca-rs" }
