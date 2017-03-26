@@ -107,5 +107,5 @@ fn main() {
         }
         display.refresh();
     }
-    display.wait();
+    display.poll_event(EVENT_ANY.bits());
 }
