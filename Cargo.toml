@@ -1,0 +1,20 @@
+[package]
+name = "caca-thing"
+version = "0.1.0"
+authors = ["Ian Pickering <ipickering2@gmail.com>"]
+
+[[bin]]
+name = "event"
+path = "bin/event.rs"
+
+[[bin]]
+name = "blit"
+path = "bin/blit.rs"
+
+[[bin]]
+name = "frames"
+path = "bin/frames.rs"
+
+[dependencies]
+caca = { path = "../../projects/caca-rs" }
+rand = "0.3.15"
