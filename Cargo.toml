@@ -12,5 +12,5 @@ name = "dithering"
 path = "bin/dithering.rs"
 
 [dependencies]
-caca = { path = "../../projects/caca-rs" }
+caca = { git = "https://github.com/Ruin0x11/caca-rs" }
 rand = "0.3.15"
