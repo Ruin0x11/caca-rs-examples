@@ -1,5 +1,5 @@
 [package]
-name = "caca-thing"
+name = "caca-rs-examples"
 version = "0.1.0"
 authors = ["Ian Pickering <ipickering2@gmail.com>"]
 

@@ -17,7 +17,7 @@ fn main() {
     let width = canvas.width() - 1;
     let mut events = VecDeque::new();
 
-    canvas.set_color_ansi(AnsiColor::White, AnsiColor::Blue);
+    canvas.set_color_ansi(&AnsiColor::White, &AnsiColor::Blue);
     canvas.draw_line(0, 0, width, 0, ' ');
     canvas.draw_line(0, height, width, height, ' ');
     canvas.put_str(0, height, "type \"quit\" to exit");
@@ -47,10 +47,10 @@ fn main() {
             events.push_front(event);
             event_opt = display.peek_event(EVENT_ANY.bits(), Duration::new(0, 0));
         }
-        canvas.set_color_ansi(AnsiColor::LightGray, AnsiColor::Black);
+        canvas.set_color_ansi(&AnsiColor::LightGray, &AnsiColor::Black);
         canvas.clear();
 
-        canvas.set_color_ansi(AnsiColor::White, AnsiColor::Blue);
+        canvas.set_color_ansi(&AnsiColor::White, &AnsiColor::Blue);
         canvas.draw_line(0, 0, width, 0, ' ');
         if let Some(first) = events.iter().next() {
             canvas.put_str(0, 0, format!("{:?}", first).as_str());
@@ -59,7 +59,7 @@ fn main() {
         canvas.draw_line(0, height, width, height, ' ');
         canvas.put_str(0, height, format!("type \"quit\" to exit: {}", quit_string(quit)).as_str());
 
-        canvas.set_color_ansi(AnsiColor::White, AnsiColor::Black);
+        canvas.set_color_ansi(&AnsiColor::White, &AnsiColor::Black);
         for (i, event) in events.iter().skip(1).enumerate() {
             let idx = i as i32 + 1;
             if idx < height {
